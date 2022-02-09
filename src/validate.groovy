@@ -33,16 +33,17 @@ def Date getEpochTime(String dateStr,String timeStr){
 def validateTime(){
     def startDate = "${params.START_DATE}" 
     def startTime = "${params.START_TIME}"
-    println( startTime)
-    println(startDate)
-
-    println("${params.START_DATE}" + " "  + "${params.START_TIME}")
+    echo startTime
+    echo startDate
+    echo "commit 8:04"
+    echo "${params.START_DATE}" + " "  + "${params.START_TIME}"
 
     def epochTime = getEpochTime( startDate,startTime)
-    println(epochTime)
+    echo epochTime
+
+    def epochTimestr:String = TimeUnit.MILLISECONDS.toSeconds(epochTime.time)
+    println(epochTimestr)
     
-    //def epochTimestr = epochTime.MILLISECONDS.toSeconds(epochTime.time)
-    //println(epochTimestr)
     
     //def epochTimestr = "${TimeUnit.MILLISECONDS.toSeconds(epochTime.time)}"
     //println(epochTimestr)
