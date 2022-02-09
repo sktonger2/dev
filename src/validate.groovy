@@ -35,14 +35,15 @@ def validateTime(){
     def startTime = "${params.START_TIME}"
     echo startTime
     echo startDate
-    echo "commit 8:04"
+    echo "commit 8:09"
     echo "${params.START_DATE}" + " "  + "${params.START_TIME}"
 
     def epochTime = getEpochTime( startDate,startTime)
     echo epochTime
 
-    def epochTimestr:String = TimeUnit.MILLISECONDS.toSeconds(epochTime.time)
+    def epochTimestr = TimeUnit.MILLISECONDS.toSeconds(epochTime.time)
     println(epochTimestr)
+    println("${TimeUnit.MILLISECONDS.toSeconds(epochTime.time)}")
     
     
     //def epochTimestr = "${TimeUnit.MILLISECONDS.toSeconds(epochTime.time)}"
