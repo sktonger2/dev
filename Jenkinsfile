@@ -1,3 +1,4 @@
+def gv
 pipeline {
     agent any
     parameters{
@@ -7,9 +8,19 @@ pipeline {
         
     }
     stages {
+        stage("init"){
+            steps{
+                script{
+                    gv= load "src/validate.groovy"
+                }
+            }
+        }
         stage('Validate') {
             steps {
-                echo 'Validating the parameters'
+                script{
+                    gv.validate()
+                }
+                
             }
         }
         stage('Deploy') {
