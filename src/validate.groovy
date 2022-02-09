@@ -38,7 +38,7 @@ def validateTime(){
     echo "commit 8:09"
     echo "${params.START_DATE}" + " "  + "${params.START_TIME}"
 
-    def epochTime = getEpochTime( startDate,startTime)
+    def epochTime = getEpochTime( "2022-01-01","23:59:59")
     echo epochTime
 
     def epochTimestr = TimeUnit.MILLISECONDS.toSeconds(epochTime.time)
