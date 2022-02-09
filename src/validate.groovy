@@ -36,6 +36,16 @@ def  getEpochTime(String dateStr,String timeStr){
 
 }
 def validateTime(){
+    SimpleDateFormat fmt = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss")
+     def tz = TimeZone.getTimeZone("GMT")
+    fmt.setTimeZone(tz)
+    def timestamp = "2022-01-01 23:59:59"
+    def date2 = fmt.parse(timestamp)
+    println(date2)
+    println("${TimeUnit.MILLISECONDS.toSeconds(date2.time)}")
+
+}
+def validateTime2(){
     def startDate = "${params.START_DATE}" 
     def startTime = "${params.START_TIME}"
     echo startTime
