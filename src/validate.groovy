@@ -18,7 +18,7 @@ import java.util.concurrent.TimeUnit
 //    println "$dateStr -> ${TimeUnit.MILLISECONDS.toSeconds(date.time)} secs"
 // }
 
-def Date getEpochTime(String dateStr,String timeStr){
+def  getEpochTime(String dateStr,String timeStr){
     //yyyy-MM-dd HH:mm:ss	2012-01-31 23:59:59
     SimpleDateFormat fmt = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss")
     println(dateStr)
@@ -29,7 +29,8 @@ def Date getEpochTime(String dateStr,String timeStr){
     println(timestamp)
     def date = fmt.parse(timestamp)
     println(date)
-    return date
+    println("${TimeUnit.MILLISECONDS.toSeconds(date.time)}")
+    //return date
     //return ${TimeUnit.MILLISECONDS.toSeconds(date.time)}
 
 
@@ -39,7 +40,7 @@ def validateTime(){
     def startTime = "${params.START_TIME}"
     echo startTime
     echo startDate
-    echo "commit 8:17"
+    echo "commit 8:37"
     echo "${params.START_DATE}" + " "  + "${params.START_TIME}"
 
     def epochTime = getEpochTime( "2022-01-01","23:59:59")
