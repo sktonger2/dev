@@ -37,8 +37,9 @@ def validateTime(){
     echo startDate
 
     def epochTime = getEpochTime( startDate,startTime)
+    println(epochTime)
     def epochTimestr = "${TimeUnit.MILLISECONDS.toSeconds(epochTime.time)}"
-    echo epochTimestr
+    println(epochTimestr)
     //echo "start time is : ${TimeUnit.MILLISECONDS.toSeconds(epochTime.time)}"
     //echo "validating time , start time: ${params.START_TIME} , end_time: ${params.END_TIME}"
     // this is new comment
