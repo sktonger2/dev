@@ -40,8 +40,9 @@ def validateTime(){
 
     def epochTime = getEpochTime( startDate,startTime)
     println(epochTime)
-    def epochTimestr = epochTime.MILLISECONDS.toSeconds(epochTime.time)
-    println(epochTimestr)
+    
+    //def epochTimestr = epochTime.MILLISECONDS.toSeconds(epochTime.time)
+    //println(epochTimestr)
     
     //def epochTimestr = "${TimeUnit.MILLISECONDS.toSeconds(epochTime.time)}"
     //println(epochTimestr)
