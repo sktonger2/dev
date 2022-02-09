@@ -31,10 +31,12 @@ def Date getEpochTime(String dateStr,String timeStr){
 
 }
 def validateTime(){
-    def startDate = "${params.START_DATE}"
+    def startDate = "${params.START_DATE}" 
     def startTime = "${params.START_TIME}"
-    echo startTime
-    echo startDate
+    println( startTime)
+    println(startDate)
+
+    println("${params.START_DATE}" + " "  + "${params.START_TIME}")
 
     def epochTime = getEpochTime( startDate,startTime)
     println(epochTime)
