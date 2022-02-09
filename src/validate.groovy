@@ -31,8 +31,15 @@ def Date getEpochTime(String dateStr,String timeStr){
 
 }
 def validateTime(){
-    def epochTime = getEpochTime( "${params.START_DATE}","${params.START_TIME}")
-    echo "start time is : ${TimeUnit.MILLISECONDS.toSeconds(epochTime.time)}"
+    def startDate = "${params.START_DATE}"
+    def startTime = "${params.START_TIME}"
+    println(startTime)
+    println(startDate)
+
+    def epochTime = getEpochTime( startDate,startTime)
+    def epochTimestr = "${TimeUnit.MILLISECONDS.toSeconds(epochTime.time)}"
+    echo epochTimestr
+    //echo "start time is : ${TimeUnit.MILLISECONDS.toSeconds(epochTime.time)}"
     //echo "validating time , start time: ${params.START_TIME} , end_time: ${params.END_TIME}"
     // this is new comment
 }
