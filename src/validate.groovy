@@ -42,7 +42,7 @@ def validateTime(){
     def timestamp = "2022-01-01 23:59:59"
     def date2 = fmt.parse(timestamp)
     println(date2)
-    println("${TimeUnit.MILLISECONDS.toSeconds(date2.time)}")
+    //println("${TimeUnit.MILLISECONDS.toSeconds(date2.time)}")
 
 }
 def validateTime2(){
