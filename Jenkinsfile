@@ -18,7 +18,7 @@ pipeline {
         stage('Validate') {
             steps {
                 script{
-                    gv.validate()
+                    gv.validateTime()
                 }
                 
             }
