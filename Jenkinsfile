@@ -23,15 +23,10 @@ pipeline {
         }
         stage('Validate') {
             steps {
-         //       script{
-                    // validate parameters are correct
-                    // image is available in jfrog
-                    
-           //         gv.validateTime()
-             //   }
-                
+              echo 'in stage validate'
             }
         }
+
         stage('Deploy') {
             steps {
                 // deploy image and create pods
