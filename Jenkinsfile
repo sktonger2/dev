@@ -23,12 +23,12 @@ pipeline {
         }
         stage('Validate') {
             steps {
-                script{
+         //       script{
                     // validate parameters are correct
                     // image is available in jfrog
                     
-                   // gv.validateTime()
-                }
+           //         gv.validateTime()
+             //   }
                 
             }
         }
