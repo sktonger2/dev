@@ -31,6 +31,9 @@ pipeline {
             steps{
                 script{
                     gv= load "src/validate.groovy"
+                    echo "$START_DATETIME"
+
+
                 }
             }
         }
