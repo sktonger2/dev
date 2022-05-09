@@ -14,8 +14,9 @@ pipeline {
             steps{
                 script{
                     gv= load "src/validate.groovy"
-                    echo "$START_DATETIME"
-
+                    echo "start time is : $START_DATETIME"
+                    echo "end date time is : $SEND_DATETIME"
+                    echo "cluster name is: $CLUSTER"
 
                 }
             }
@@ -26,7 +27,7 @@ pipeline {
                     // validate parameters are correct
                     // image is available in jfrog
                     
-                    gv.validateTime()
+                   // gv.validateTime()
                 }
                 
             }
