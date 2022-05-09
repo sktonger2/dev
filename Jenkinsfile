@@ -8,23 +8,6 @@ pipeline {
         choice(name: 'CLUSTER', choices: ['qe','prod'], description: 'deploy cluster details, it will be deployed in tlb-repair ns')
         
     }
-    environment { 
-        // K8s credentials
-        KUBECONFIG = credentials('my-kubeconfig')
-        // cluster details
-        NAMESPACE = ''
-        CLUSTER = ''
-        COMMIT_SET= ''
-        IMAGE_BRANCH_VALUE = ''
-        IMAGE_TAG_VALUE=''
-        DOCKER_IMAGE=''
-        API_JFROG =''
-        TAGS_REQUEST_URL=''
-        TAG_CHK =''
-        VALUES_FILE=''
-
-
-    }
 
     stages {
         stage("init"){
