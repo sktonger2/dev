@@ -13,7 +13,7 @@ pipeline {
         stage("init"){
             steps{
                 script{
-                    gv= load "src/validate.groovy"
+                    //gv= load "src/validate.groovy"
                     echo "start time is : $START_DATETIME"
                     echo "end date time is : $SEND_DATETIME"
                     echo "cluster name is: $CLUSTER"
