@@ -13,6 +13,9 @@ pipeline {
         stage("init"){
             steps{
                 script{
+                    timeout(time: 60, unit: 'SECONDS') {
+                        input 'Continue? '
+                     }
                     //gv= load "src/validate.groovy"
                     echo "start time is : $START_DATETIME"
                     echo "end date time is : $SEND_DATETIME"
