@@ -16,6 +16,8 @@ pipeline {
                     timeout(time: 60, unit: 'SECONDS') {
                         input 'Continue? '
                      }
+                    echo "***** Launching of pipeline 2*****"
+                    def job = build job: 'pipeline2', parameters: [string(name: 'START_DATETIME', value: '22may') string(name: 'END_DATETIME', value: '22June') choice(name: 'CLUSTER', value: 'qe')]
                     //gv= load "src/validate.groovy"
                     echo "start time is : $START_DATETIME"
                     echo "end date time is : $END_DATETIME"
