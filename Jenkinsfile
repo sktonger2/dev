@@ -13,7 +13,7 @@ pipeline {
         stage("init"){
             steps{
                 script{
-                    timeout(time: 60, unit: 'SECONDS') {
+                    timeout(time: 60, unit: 'MINUTES') {
                         input 'Continue? '
                      }
                     //echo "***** Launching of pipeline 2*****"
