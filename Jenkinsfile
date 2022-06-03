@@ -19,11 +19,17 @@ pipeline {
                     //echo "***** Launching of pipeline 2*****"
                    // def job = build job: 'pipeline2', parameters: [[$class: 'StringParameterValue', name: 'START_DATETIME', value: '22May'] ,[$class: 'StringParameterValue', name: 'END_DATETIME', value: '22June'], [$class: 'StringParameterValue', name: 'CLUSTER', value: 'qe']]
                     //gv= load "src/validate.groovy"
-                    
+                   script{
+                   if(CLUSTER == 'qe'){
+                   echo "we are in qe cluster"
+                   }
+                   if(CLUSTER == 'prod'){
+                   echo "we are in prod cluster"
+                   }
                     echo "start time is : $START_DATETIME"
                     echo "end date time is : $END_DATETIME"
                     echo "cluster name is: $CLUSTER"
-
+                   }
                 }
             }
         }
